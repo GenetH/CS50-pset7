@@ -24,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
 		if(query("INSERT INTO users (username, hash, cash) VALUES(?, ?, 10000.00)", $_POST["username"], crypt($_POST["password"])) === false)
 		{
-			echo('Username already exists');
+			apologize('Username already exists');
 		}else
 		{
 			$rows = query("SELECT LAST_INSERT_ID() AS id");

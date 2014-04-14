@@ -1,4 +1,4 @@
-<form action="sell.php" method="post">
+<form action="buy.php" method="post">
     <fieldset>
         <div class="form-group">
             <input autofocus class="form-control" name="stock" placeholder="Stock" type="text"/>

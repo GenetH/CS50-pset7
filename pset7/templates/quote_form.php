@@ -8,6 +8,3 @@
         </div>
     </fieldset>
 </form>
-<div>
-    or <a href="login.php">log in</a>
-</div>

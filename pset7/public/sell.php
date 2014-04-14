@@ -16,9 +16,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	 		apologize("You don't own any shares of this stock");
 	 	}else{
 		 	$value = lookup("$stock");
-		 	$profit = $shares[0]["shares"]*$value["price"];
+		 	$shares = $shares[0]["shares"];
+		 	$price = $value["price"];
+		 	$profit = $shares*$price;
+		 	
 		 	query("DELETE FROM portfolio WHERE id = $id AND symbol = '$stock'");
 		 	query("UPDATE users SET cash = cash + $profit WHERE id = $id");
+		 	query("INSERT INTO history (id, symbol, status, shares, price) 
+		 	VALUES($id, '$stock', 'SELL', $shares, $price)");
 		 	render("../templates/sell.php", ["title" => "Sell", "value" => $value , "profit" => $profit]);
 		 }
 	 }

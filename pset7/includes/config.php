@@ -16,6 +16,7 @@
     // requirements
     require("constants.php");
     require("functions.php");
+    
 
     // enable sessions
     session_start();
@@ -28,5 +29,4 @@
             redirect("login.php");
         }
     }
-
 ?>
