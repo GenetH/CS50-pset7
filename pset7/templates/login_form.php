@@ -1,3 +1,4 @@
+<!-- This form displays the login form which has 2 textboxes and a login button and a register link -->
 <form action="login.php" method="post">
     <fieldset>
         <div class="form-group">

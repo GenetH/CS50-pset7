@@ -1,3 +1,4 @@
+<!-- The navigation bar -->
 <ul class="menu">
 		<li><a href="index.php" class="button">Home</a></li>
 		<li><a href="quote.php" class="button">Quote</a></li>

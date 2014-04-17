@@ -1,3 +1,4 @@
+<!-- This form displays a text box and a deposit button -->
 <form action="deposit.php" method="post">
     <fieldset>
         <div class="form-group">

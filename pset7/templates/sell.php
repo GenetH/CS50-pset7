@@ -1,7 +1,6 @@
 <?php
-    // configuration
+    // This displays which stock the user just sold and the profit he/she made
     print("You sold your ". $value["name"] . " stock.");
-?><br>
-<?php
+	print("<br>");
     print("You made a profit of ". $profit . " dollars.");
 ?>

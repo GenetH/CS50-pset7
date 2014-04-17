@@ -6,6 +6,7 @@ require("../includes/config.php");
 // if form was submitted
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
+	// If the symbol doensn't exist, display error message
 	$_POST = lookup($_POST["symbol"]);
 	 if($_POST === false)
 	 {

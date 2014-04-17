@@ -1,3 +1,4 @@
+<!-- This displays the quote form which has 1 textbox and a submit button -->
 <form action="quote.php" method="post">
     <fieldset>
         <div class="form-group">

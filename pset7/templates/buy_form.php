@@ -1,3 +1,4 @@
+<!-- This is the buy template which displays 2 text boxes and a buy button -->
 <form action="buy.php" method="post">
     <fieldset>
         <div class="form-group">

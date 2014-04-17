@@ -27,6 +27,7 @@
             <div id="top">
                 <a href="/"><img alt="C$50 Finance" src="/img/logo.gif"/></a>
             </div>
+            <!-- The navigation bar included at the top of every page-->
             <?php require("../includes/nav.php");?>
 
             <div id="middle">

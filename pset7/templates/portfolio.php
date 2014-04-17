@@ -1,3 +1,4 @@
+<!-- This displays a message with your current balance, and a table with your current shares -->
 <div>
 	<div id="message">
 		<?php

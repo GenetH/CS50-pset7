@@ -3,7 +3,7 @@
 // configuration
 require("../includes/config.php");
 
-// if form was submitted
+// if form was submitted 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 	 if(empty($_POST["stock"]) || empty($_POST["shares"]) || !preg_match("/^\d+$/", $_POST["shares"]) ||
@@ -28,6 +28,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	 	$cash = query("SELECT cash FROM users WHERE id = $id");
 	 	$cost = $price*$_POST["shares"];
 	 	
+	 	// If the cost is more then the balanc of the user, an error message is displayed
 	 	if($cost > $cash[0]["cash"])
 	 	{
 	 		apologize("You don't have enough money to buy ". $shares . " shares from " . $stock["name"] . ".");

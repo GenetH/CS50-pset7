@@ -1,3 +1,4 @@
+<!-- This form displays a table with all your history transactions -->
 <div>
     <table id="overview">
 		<?php

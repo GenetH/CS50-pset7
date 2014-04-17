@@ -1,3 +1,4 @@
+<!-- This displays the sell form which has 1 textbox and a sell button -->
 <form action="sell.php" method="post">
     <fieldset>
         <div class="form-group">

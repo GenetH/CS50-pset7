@@ -3,10 +3,11 @@
     // configuration
     require("../includes/config.php"); 	
 	
-	
     $id = $_SESSION["id"];
+    // Retrieve all the shares this users owns
 	$rows = query("SELECT id, symbol, shares FROM portfolio WHERE id = $id");
 				
+	// A positions array which stores all the information about the shares
 	$positions = [];
 	foreach ($rows as $row)
 	{
@@ -23,6 +24,7 @@
 	  }
 	}
 	  
+	// This is the balance of the user
 	$cash = query("SELECT username, cash FROM users WHERE id = $id");
     
     // render portfolio

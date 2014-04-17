@@ -33,6 +33,7 @@
     margin: 20px;
 }
 
+
 #overview
 {
 	border-spacing: 20px;
@@ -43,6 +44,7 @@
 #overview, td
 {
     color : solid black;
+    border-bottom : 1px solid black;
 }
 
 #overview, th

@@ -12,12 +12,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	 }else{
 	 	$id = $_SESSION["id"];
 	 	$amount = $_POST["amount"];
+	 	
+	 	// If the amount is not a valid numeric number an error message is displayed
 	 	if($amount < 0 || !is_numeric($amount)){
 	 		apologize("Not a valid amount.");
 	 	}else{
 		 	query("UPDATE users SET cash = cash + $amount WHERE id = $id");
-		 	query("INSERT INTO history (id, status, price) 
-		 	VALUES($id, 'DEPOSIT', $amount)");
+		 	query("INSERT INTO history (id, status, price) VALUES($id, 'DEPOSIT', $amount)");
 		 	render("../templates/deposit.php", ["title" => "Deposit", "amount" => $amount]);
 		 }
 	 }
