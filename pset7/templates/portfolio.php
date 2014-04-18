@@ -2,7 +2,7 @@
 <div>
 	<div id="message">
 		<?php
-			print("Hello, ". $cash[0]["username"] .". Your current balance is " . $cash[0]["cash"].".");
+			print("Hello, ". $cash[0]["username"] .". Your current balance is " . sprintf("%.2f",$cash[0]["cash"]).".");
 		?>
 	</div>
     <table id="overview">

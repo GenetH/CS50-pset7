@@ -19,14 +19,13 @@
 		  "price" => $stock["price"],
 		  "shares" => $row["shares"],
 		  "symbol" => $row["symbol"],
-		  "total" => $row["shares"]*$stock["price"]
+		  "total" => sprintf("%.2f", $row["shares"]*$stock["price"])
 		  ];
 	  }
 	}
 	  
 	// This is the balance of the user
 	$cash = query("SELECT username, cash FROM users WHERE id = $id");
-    
     // render portfolio
     render("portfolio.php", ["title" => "Positions", "positions" => $positions, "cash" => $cash]);
 

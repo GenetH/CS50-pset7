@@ -44,5 +44,5 @@
         // else render form
         render("login_form.php", ["title" => "Log In"]);
     }
-
+    
 ?>

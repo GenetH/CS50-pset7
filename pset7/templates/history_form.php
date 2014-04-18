@@ -17,7 +17,7 @@
 				print("<td>" . $history["date"] . "</td>");
 				print("<td>" . $history["symbol"] . "</td>");
 				print("<td>" . $history["shares"] . "</td>");
-				print("<td>" . $history["price"] . "</td>");
+				print("<td>" . sprintf("%.2f",$history["price"]) . "</td>");
 				print("</tr>");
 			}
 		?>
